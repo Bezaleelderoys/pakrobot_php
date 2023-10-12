@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM VALIDASI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="bg-img"><h1>SDHAKSFH</h1></div>
+
+<div class="content">
     <?php
 
         $nama = $email = $jnskelamin = $alamat = $cita = "";
@@ -24,30 +28,30 @@
             return $data;
         }
     ?>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            Nama : <input type="text" name="nama"><br>
+            Email : <input type="text" name="email"><br>
+            Alamat : <input type="text" name="alamat"><br>
+            Cita - cita : <input type="text" name="cita"><br>
+            Jenis Kelamin : <input type="radio" name="jnskelamin" value="Perempuan">Perempuan
+                            <input type="radio" name="jnskelamin" value="Pria">Pria
+                            <input type="radio" name="jnskelamin" value="Random">Random
+            <input type="submit" name="submit" value="submit">
+        </form>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        Nama : <input type="text" name="nama"><br>
-        Email : <input type="text" name="email"><br>
-        Alamat : <input type="text" name="alamat"><br>
-        Cita - cita : <input type="text" name="cita"><br>
-        Jenis Kelamin : <input type="radio" name="jnskelamin" value="Perempuan">Perempuan
-                        <input type="radio" name="jnskelamin" value="Pria">Pria
-                        <input type="radio" name="jnskelamin" value="Random">Random
-        <input type="submit" name="submit" value="submit">
-    </form>
-
-    <?php
-        echo "<h1>Hasil Inputan Kalian</h1>";
-        echo $nama;
-        echo "<br>";
-        echo $email;
-        echo "<br>";
-        echo $jnskelamin;
-        echo "<br>";
-        echo $alamat;
-        echo "<br>";
-        echo $cita;
-        echo "<br>";
-    ?>
+        <?php
+            echo "<h1>Hasil Inputan Kalian</h1>";
+            echo $nama;
+            echo "<br>";
+            echo $email;
+            echo "<br>";
+            echo $jnskelamin;
+            echo "<br>";
+            echo $alamat;
+            echo "<br>";
+            echo $cita;
+            echo "<br>";
+        ?>
+    </div>
 </body>
 </html>
